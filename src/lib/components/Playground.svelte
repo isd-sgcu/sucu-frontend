@@ -17,6 +17,7 @@
 	import thumbnail from '../assets/images/thumbnail.png';
 	import OrganizationCard from './OrganizationCard/OrganizationCard.svelte';
 	import Pagination from './Pagination/Pagination.svelte';
+	import StatisticCard from './StatisticCard.svelte';
 
 	modalShow.set(false);
 
@@ -342,6 +343,14 @@
 		<h2 class="font-bold text-2xl mb-4">Pagination</h2>
 		<Pagination Arrayitem={PaginationMockitem} />
 	</section>
+
+	<section class="section w-fit">
+		<h2 class="font-bold text-2xl mb-4">StatisticCard</h2>
+		<StatisticCard></StatisticCard>
+		<StatisticCard></StatisticCard>
+		<StatisticCard></StatisticCard>
+	</section>
+	
 </div>
 
 <style>
