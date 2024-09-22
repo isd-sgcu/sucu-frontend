@@ -13,4 +13,3 @@
 <button class={classes} on:click on:keydown {...$$restProps}>
 	<slot />
 </button>
-	

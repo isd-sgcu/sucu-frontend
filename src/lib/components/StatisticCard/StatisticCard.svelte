@@ -20,11 +20,11 @@
 	<div class="px-2 md:px-7 py-2 flex flex-col justify-between w-full">
 		<div>
 			<p class="text-xl md:text-2xl font-semibold text-sucu-gray-dark mb-2">
-				สถิติการเข้าประชุมของ ส.ส. ปีการศึกษา 2566
+				{title}
 			</p>
 			<div class="flex items-center text-lg md:text-xl text-sucu-gray-dark mb-3 md:mb-5">
 				<FontAwesomeIcon icon={faCalendar} class="mr-3" />
-				<p>04 กรกฎาคม 2567</p>
+				<p>{createAt}</p>
 			</div>
 		</div>
 
@@ -32,15 +32,14 @@
 			<div class="mb-4 md:mb-0">
 				<div class="flex items-center mb-2">
 					<FontAwesomeIcon icon={faChalkboard} class="mr-3" />
-					<p class="text-sucu-gray-dark">สถิติ</p>
+					<p class="text-sucu-gray-dark">{infoType}</p>
 				</div>
 				<div class="flex items-center">
 					<FontAwesomeIcon icon={faPencil} class="mr-3" />
-					<p class="text-sucu-gray-dark">สภานิสิตฯ</p>
+					<p class="text-sucu-gray-dark">{organization}</p>
 				</div>
 			</div>
 			<a href={hrefUrl} class="text-black text-lg md:text-xl self-center"> อ่านต่อ » </a>
 		</div>
-    
 	</div>
 </div>
