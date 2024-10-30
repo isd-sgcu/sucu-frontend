@@ -19,7 +19,6 @@
 	import OrganizationCard from './OrganizationCard/OrganizationCard.svelte';
 	import Pagination from './Pagination/Pagination.svelte';
 
-
 	modalShow.set(false);
 
 	function showModal() {
