@@ -346,29 +346,28 @@
 
 	<section class="section w-full space-y-4">
 		<h2 class="font-bold text-2xl mb-4">StatisticCard</h2>
-		<StatisticCard 
-			title="สถิติการเข้าประชุมของ ส.ส. ปีการศึกษา 2566" 
-			createAt="04 กรกฎาคม 2567" 
-			infoType="สถิติ" 
-			organization="สภานิสิตฯ" 
-			hrefUrl="https://example.com/statistics-meeting-2566" 
+		<StatisticCard
+			title="สถิติการเข้าประชุมของ ส.ส. ปีการศึกษา 2566"
+			createAt="04 กรกฎาคม 2567"
+			infoType="สถิติ"
+			organization="สภานิสิตฯ"
+			hrefUrl="https://example.com/statistics-meeting-2566"
 		/>
-		<StatisticCard 
-			title="งบประมาณโครงการ 17 is Right Here" 
-			createAt="04 กรกฎาคม 2567" 
-			infoType="งบประมาณ" 
-			organization="องค์กรบริหารสโมสรนิสิต (อบจ.)" 
-			hrefUrl="https://example.com/budget-project-17" 
+		<StatisticCard
+			title="งบประมาณโครงการ 17 is Right Here"
+			createAt="04 กรกฎาคม 2567"
+			infoType="งบประมาณ"
+			organization="องค์กรบริหารสโมสรนิสิต (อบจ.)"
+			hrefUrl="https://example.com/budget-project-17"
 		/>
-		<StatisticCard 
-			title="สถิติการเข้าประชุมของ ส.ส. ปีการศึกษา 2566" 
-			createAt="04 กรกฎาคม 2567" 
-			infoType="สถิติ" 
-			organization="สภานิสิตฯ" 
-			hrefUrl="https://example.com/statistics-meeting-2566" 
+		<StatisticCard
+			title="สถิติการเข้าประชุมของ ส.ส. ปีการศึกษา 2566"
+			createAt="04 กรกฎาคม 2567"
+			infoType="สถิติ"
+			organization="สภานิสิตฯ"
+			hrefUrl="https://example.com/statistics-meeting-2566"
 		/>
 	</section>
-	
 </div>
 
 <style>
