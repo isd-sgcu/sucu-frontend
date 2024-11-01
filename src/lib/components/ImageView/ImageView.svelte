@@ -82,7 +82,7 @@
 					class="w-full aspect-video object-cover object-center snap-center"
 				/>
 			{/each}
-	</div>
+		</div>
 
 		<button on:click={handleClickLeft} class="absolute left-4 top-1/2 transform -translate-y-1/2">
 			<Fa icon={faChevronLeft} class="!w-8 !h-8 text-white opacity-70" />

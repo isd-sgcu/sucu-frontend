@@ -10,7 +10,6 @@
 	const pushPath = (path: string) => {
 		goto(`/info/${path}`);
 	};
-
 </script>
 
 <MaxWidthWrapper class="flex flex-col flex-grow min-h-screen">
@@ -24,7 +23,10 @@
 				<div class="flex flex-col gap-9">
 					<span class="font-bold text-5xl leading-[48px] tracking-[-0.01em]">{org.title}</span>
 					<span class="text-xl">{org.desc}</span>
-					<Button class={cn("w-64 h-14 font-semibold text-2xl text-black", org.buttonColor)} on:click={() => pushPath(org.subPath)}>{org.buttonText}</Button>
+					<Button
+						class={cn('w-64 h-14 font-semibold text-2xl text-black', org.buttonColor)}
+						on:click={() => pushPath(org.subPath)}>{org.buttonText}</Button
+					>
 				</div>
 			</div>
 		{/each}

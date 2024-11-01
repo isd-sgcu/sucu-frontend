@@ -14,12 +14,12 @@ const orgDatas = [
 		title: 'สโมสรนิสิตจุฬาลงกรณ์มหาวิทยาลัย',
 		desc: tempText,
 		buttonText: 'รู้จักสโมสรนิสิตฯ',
-		buttonColor : 'bg-sucu-pink-05',
+		buttonColor: 'bg-sucu-pink-05',
 		subPath: 'smo',
-		shortName : 'สโมสรนิสิตจุฬาฯ',
+		shortName: 'สโมสรนิสิตจุฬาฯ',
 		whatIs: tempText,
 		duty: tempText,
-		images : [testImg1, testImg2]
+		images: [testImg1, testImg2]
 	},
 	{
 		src: sgcuLOGO,
@@ -27,12 +27,12 @@ const orgDatas = [
 		title: 'องค์การบริหารสโมสรนิสิต จุฬาลงกรณ์มหาวิทยาลัย (อบจ.)',
 		desc: tempText,
 		buttonText: 'รู้จัก อบจ.',
-		buttonColor : 'bg-sucu-pink-03',
+		buttonColor: 'bg-sucu-pink-03',
 		subPath: 'sgcu',
-		shortName : 'อบจ.',
+		shortName: 'อบจ.',
 		whatIs: tempText,
 		duty: tempText,
-		images : [testImg1, testImg2, testImg1, testImg2, testImg1, testImg2]
+		images: [testImg1, testImg2, testImg1, testImg2, testImg1, testImg2]
 	},
 	{
 		src: sapaLOGO,
@@ -40,9 +40,9 @@ const orgDatas = [
 		title: 'สภานิสิตจุฬาลงกรณ์มหาวิทยาลัย',
 		desc: tempText,
 		buttonText: 'รู้จักสภานิสตฯ',
-		buttonColor : 'bg-sucu-pink-02',
+		buttonColor: 'bg-sucu-pink-02',
 		subPath: 'sapa',
-		shortName : 'สภานิสิต',
+		shortName: 'สภานิสิต',
 		whatIs: tempText,
 		duty: tempText
 	}
