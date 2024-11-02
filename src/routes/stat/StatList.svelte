@@ -21,7 +21,7 @@
 			createAt={document.created_at}
 			infoType={document.type_id}
 			organization={document.author.role}
-			hrefUrl={`/document/${document.id}`}
+			hrefUrl={`/stat/${document.id}`}
 		/>
 	{/each}
 {/if}
