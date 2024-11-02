@@ -4,7 +4,6 @@
 	import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
 	import { typography } from '../../styles/tailwind/typography';
-	import StatisticCard from '$lib/components/StatisticCard/StatisticCard.svelte';
 	import TabsRoot from '$lib/components/Tabs/TabsRoot.svelte';
 	import TabsList from '$lib/components/Tabs/TabsList.svelte';
 	import TabsTrigger from '$lib/components/Tabs/TabsTrigger.svelte';

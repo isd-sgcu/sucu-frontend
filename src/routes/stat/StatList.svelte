@@ -15,7 +15,7 @@
 {#if documents.length === 0}
 	<p>No documents available.</p>
 {:else}
-	{#each documents as document, i}
+	{#each documents as document}
 		<StatisticCard
 			title={document.title}
 			createAt={document.created_at}
