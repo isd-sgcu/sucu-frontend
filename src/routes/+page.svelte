@@ -9,6 +9,7 @@
 	import OrganizationCard from '$lib/components/OrganizationCard/OrganizationCard.svelte';
 	import { mockAnnouncementCard } from '$lib/mock/annoucementCardData';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
 	let container: HTMLDivElement;
 	let activeSlide = 0;
@@ -76,6 +77,7 @@
 					'font-semibold px-9 py-2 leading-5',
 					'max-md:text-xs max-md:leading-3 max-md:px-3 max-md:py-1.5'
 				)}
+				on:click={() => goto(`/info`)}
 			>
 				รู้จักกับสโมสรนิติฯ
 			</Button>
