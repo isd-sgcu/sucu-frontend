@@ -2,6 +2,7 @@
 	"name": "sucu-frontend-2024",
 	"version": "0.0.1",
 	"private": true,
+	"types": "module",
 	"packageManager": "pnpm@8.12.1",
 	"scripts": {
 		"dev": "vite dev",
