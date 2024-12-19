@@ -10,7 +10,7 @@
       errorMessage = '';
       try {
         const response = await login(studentId, password);
-        console.log('Login successful:', response);
+        console.log('Login successful:', response.result.access_token);
         // Add navigation or additional logic here
       } catch (error) {
         errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';

@@ -2,11 +2,10 @@ const API_URL = import.meta.env.VITE_SERVER_URL;
 
 export async function login(studentId: String, password: String) {
   try {
-    const response = await fetch(`${API_URL}/auth/login`, {
+    const response = await fetch(`${API_URL}/api/v1/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'http://localhost:3000'
       },
       body: JSON.stringify({ student_id: studentId, password }),
     });
