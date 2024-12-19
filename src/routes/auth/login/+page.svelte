@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { goto } from '$app/navigation';
 	import { login } from '$lib/api/login';
 	import CryptoJS from 'crypto-js';
 
@@ -15,11 +16,11 @@
 			const encryptedToken = CryptoJS.AES.encrypt(token, secretKey).toString();
 			sessionStorage.setItem('encryptedToken', encryptedToken);
 			console.log('Login successful:');
-			// Add navigation or additional logic here
+			goto('/admin');
 		} catch (error) {
 			errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
 		}
-		getDecryptedToken();
+		// getDecryptedToken();
 	};
 
 	const getDecryptedToken = () => {
