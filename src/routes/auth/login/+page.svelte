@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { goto } from '$app/navigation';
+	import { goto } from '$app/navigation';
 	import { login } from '$lib/api/login';
 	import CryptoJS from 'crypto-js';
 
