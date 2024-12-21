@@ -16,5 +16,4 @@
 
 <div class="flex min-h-screen bg-white">
 	<Sidebar {menuItems} {user} />
-
 </div>
