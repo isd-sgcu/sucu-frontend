@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import sgcuLogo from '$lib/assets/images/sgcu.png';
 	import isdLogo from '$lib/assets/images/isdlogo.png';
 	import editLogo from '$lib/assets/icons/edit.svg';
@@ -7,11 +8,9 @@
 
 	let currentPath = '';
 
-	if (typeof window !== 'undefined') {
+	onMount(() => {
 		currentPath = window.location.pathname;
-	}
-
-	$: currentPath;
+	});
 
 	function handleClick() {
 		console.log('Edit icon clicked');
@@ -56,7 +55,7 @@
 				{user.name}
 				{user.lastname}
 			</div>
-			<div class=" body-medium font-semibold">
+			<div class="body-medium font-semibold">
 				{user.role}
 			</div>
 		</div>

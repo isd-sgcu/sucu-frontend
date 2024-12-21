@@ -20,7 +20,7 @@
 		} catch (error) {
 			errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
 		}
-		// getDecryptedToken();
+		getDecryptedToken();
 	};
 
 	const getDecryptedToken = () => {
