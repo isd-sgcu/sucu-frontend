@@ -40,10 +40,10 @@
                 <img src={editLogo} alt="Edit" class="h-4 w-4" />
             </button>
           </div>
-        <div class="text-pink-500 body-medium font-semibold">
+        <div class="body-medium font-semibold">
           {user.name} {user.lastname}
         </div>
-        <div class="text-pink-500 body-medium font-semibold">
+        <div class=" body-medium font-semibold">
           {user.role}
         </div>
       </div>
