@@ -35,9 +35,7 @@
 		class="w-full h-[500px] max-md:h-[246px] flex items-center justify-center text-center bg-cover bg-center"
 		style="background-image: url({sucuHomeBanner1});"
 	>
-		<div
-			class="w-[650px] h-[263px] max-md:h-[160px] flex flex-col items-center justify-center justify-between"
-		>
+		<div class="w-[650px] h-[263px] max-md:h-[160px] flex flex-col items-center justify-center">
 			<div
 				class="w-full h-[192px] max-md:h-[120px] p-2.5 flex flex-col gap-2.5 max-md:gap-1 text-sucu-gray-dark"
 			>
@@ -45,7 +43,7 @@
 					class={cn(
 						typography({ variant: 'heading1' }),
 						'tracking-tight leading-none',
-						'max-md:text-3xl max-md:font-semibold'
+						'max-md:text-2xl max-md:font-semibold'
 					)}
 				>
 					สโมสรนิสิต
@@ -54,7 +52,7 @@
 					class={cn(
 						typography({ variant: 'heading1' }),
 						'tracking-tight leading-none',
-						'max-md:text-3xl max-md:font-semibold'
+						'max-md:text-2xl max-md:font-semibold'
 					)}
 				>
 					จุฬาลงกรณ์มหาวิทยาลัย
@@ -63,7 +61,7 @@
 					class={cn(
 						typography({ variant: 'body-large' }),
 						'font-semibold leading-6',
-						'max-md:text-xs max-md:leading-3'
+						'max-md:text-xs max-md:leading-3 '
 					)}
 				>
 					Student Union, Chulalongkorn University
@@ -75,7 +73,7 @@
 				class={cn(
 					typography({ variant: 'body-medium' }),
 					'font-semibold px-9 py-2 leading-5',
-					'max-md:text-xs max-md:leading-3 max-md:px-3 max-md:py-1.5'
+					'max-md:text-xs max-md:leading-3 max-md:px-3 max-md:py-1.5 mt-5'
 				)}
 				on:click={() => goto(`/info`)}
 			>

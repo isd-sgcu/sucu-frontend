@@ -42,7 +42,7 @@
 
 	<div class="flex flex-col gap-6 lg:gap-12">
 		<p>{document?.content.repeat(8)}</p>
-		<div class="w-[342px] h-[220px] lg:w-[876px] lg:h-[500px] bg-sucu-gray-light" />
+		<div class="w-[342px] h-[220px] lg:w-[876px] lg:h-[500px] bg-sucu-gray-light"></div>
 		<Button class="w-fit mb-16" on:click={() => modalShow.set(true)}
 			>ดาวน์โหลดเอกสารที่เกี่ยวข้อง</Button
 		>

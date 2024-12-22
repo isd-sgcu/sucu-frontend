@@ -26,7 +26,7 @@
 	</a>
 
 	{#if isMenuOpen}
-		<div class="fixed inset-0 bg-gray-700 bg-opacity-40 backdrop-blur-sm" />
+		<div class="fixed inset-0 bg-gray-700 bg-opacity-40 backdrop-blur-sm"></div>
 		<button class="text-white md:hidden text-4xl focus:outline-none z-50" on:click={toggleMenu}>
 			&times;
 		</button>

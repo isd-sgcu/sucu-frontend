@@ -41,6 +41,6 @@
 				'absolute left-1/2 transform -translate-x-1/2 bottom-[5.5px] sm:-bottom-1 h-1 sm:h-2 w-[120%] bg-sucu-pink-hover rounded-lg'
 			)}
 			transition:slide={{ duration: 300, axis: 'x' }}
-		/>
+		></div>
 	{/if}
 </div>
