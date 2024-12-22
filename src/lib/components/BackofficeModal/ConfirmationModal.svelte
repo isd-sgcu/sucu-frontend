@@ -48,14 +48,14 @@
                     <div class="flex justify-end gap-4">
                         <button 
                             type="button" 
-                            class="px-4 py-2 text-sucu-gray-dark font-semibold bg-white rounded-sm border border-sucu-pink-01"
+                            class="px-4 py-2 text-white font-semibold bg-sucu-pink-01 rounded-sm"
                             on:click={handleConfirm}
                         >
                             {confirmText}
                         </button>
                         <button 
                             type="button" 
-                            class="px-4 py-2 text-white font-semibold bg-sucu-pink-01 rounded-sm"
+                            class="px-4 py-2 text-sucu-gray-dark font-semibold bg-white rounded-sm border border-sucu-pink-01 hover:bg-red-500 hover:text-white transition-colors duration-300"
                             on:click={handleCancel}
                         >
                             {cancelText}
