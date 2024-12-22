@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import sgcuLogo from '$lib/assets/images/sgcu.png';
-	import isdLogo from '$lib/assets/images/isdlogo.png';
+	import isdLogo from '$lib/assets/icons/isd.svg';
 	import editLogo from '$lib/assets/icons/edit.svg';
 	export let menuItems: { title: string; href: string }[];
 	export let user: { name: string; lastname: string; role: string };
