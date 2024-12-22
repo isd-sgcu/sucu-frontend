@@ -52,8 +52,8 @@
 				</button>
 			</div>
 			<div class="body-medium font-semibold">
-				{user.name}
-				{user.lastname}
+				<div>{user.name}</div>
+                <div>{user.lastname}</div>
 			</div>
 			<div class="body-medium font-semibold">
 				{user.role}
