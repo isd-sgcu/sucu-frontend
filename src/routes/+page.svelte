@@ -35,9 +35,7 @@
 		class="w-full h-[500px] max-md:h-[246px] flex items-center justify-center text-center bg-cover bg-center"
 		style="background-image: url({sucuHomeBanner1});"
 	>
-		<div
-			class="w-[650px] h-[263px] max-md:h-[160px] flex flex-col items-center justify-center "
-		>
+		<div class="w-[650px] h-[263px] max-md:h-[160px] flex flex-col items-center justify-center">
 			<div
 				class="w-full h-[192px] max-md:h-[120px] p-2.5 flex flex-col gap-2.5 max-md:gap-1 text-sucu-gray-dark"
 			>
