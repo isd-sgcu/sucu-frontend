@@ -21,7 +21,6 @@
 			errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
 		}
 	};
-
 </script>
 
 <div class="min-h-screen flex items-center justify-center bg-sucu-pink-04">

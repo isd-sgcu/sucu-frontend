@@ -53,7 +53,7 @@
 			</div>
 			<div class="body-small font-semibold">
 				<div class="text-xs">{user.name}</div>
-                <div class="text-xs">{user.lastname}</div>
+				<div class="text-xs">{user.lastname}</div>
 			</div>
 			<div class="text-xs font-semibold">
 				{user.role}
