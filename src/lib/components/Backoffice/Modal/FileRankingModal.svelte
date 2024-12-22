@@ -3,6 +3,9 @@
     import Fa from 'svelte-fa';
 
     export let open = false;
+    export let variant: 'announcement' | 'statistic' = 'announcement';
+
+    
     let dialogEl: HTMLDialogElement;
     
     let title = '';
@@ -11,7 +14,6 @@
     let contentFiles: File[] = [];
     let documentFiles: File[] = [];
     let mainCoverIndex = 0;
-    let variant: 'announcement' | 'statistic' = 'announcement';
     let dragOver = {
         cover: false,
         content: false,
