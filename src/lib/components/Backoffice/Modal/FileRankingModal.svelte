@@ -11,6 +11,7 @@
     let contentFiles: File[] = [];
     let documentFiles: File[] = [];
     let mainCoverIndex = 0;
+    let variant: 'announcement' | 'statistic' = 'announcement';
     let dragOver = {
         cover: false,
         content: false,
@@ -103,7 +104,7 @@
                     <form on:submit|preventDefault={handleSubmit} class="space-y-6">
                         <!-- Title -->
                         <div class="space-y-1">
-                            <span class="text-sm text-sucu-dark-gray font-semibold">ชื่อประกาศ</span>
+                            <span class="text-sm text-sucu-dark-gray font-semibold">{variant === 'announcement' ? 'ชื่อประกาศ' : 'ชื่อสถิติ'}</span>
                             <input
                                 type="text"
                                 bind:value={title}
@@ -125,7 +126,7 @@
                         <!-- Cover Images Section -->
                         <div class="grid grid-cols-2 gap-4">
                             <div>
-                                <span class="text-xl text-sucu-dark-gray font-semibold">เพิ่มรูปปกของหน้าประกาศ</span>
+                                <span class="text-xl text-sucu-dark-gray font-semibold">{variant === 'announcement' ? 'เพิ่มรูปภาพของหน้าประกาศ' : 'เพิ่มรูปปกหน้าสถิติและงบประมาณ'}</span>
                                 <input
                                     type="file"
                                     bind:this={coverFileInput}
@@ -192,7 +193,7 @@
                         <!-- Documents Section -->
                         <div class="grid grid-cols-2 gap-4">
                             <div>
-                                <span class="text-sm text-sucu-dark-gray font-semibold text-xl">เพิ่มเอกสารในหน้าประกาศ</span>
+                                <span class="text-sm text-sucu-dark-gray font-semibold text-xl">{variant === 'announcement' ? 'เพิ่มเอกสารในหน้าประกาศ' : 'เพิ่มเอกสารในหน้าสถิติและงบประมาณ'}</span>
                                 <input
                                     type="file"
                                     bind:this={documentFileInput}
