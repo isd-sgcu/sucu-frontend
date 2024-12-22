@@ -51,11 +51,11 @@
 					<img src={editLogo} alt="Edit" class="h-4 w-4" />
 				</button>
 			</div>
-			<div class="body-medium font-semibold">
-				<div>{user.name}</div>
-                <div>{user.lastname}</div>
+			<div class="body-small font-semibold">
+				<div class="text-xs">{user.name}</div>
+                <div class="text-xs">{user.lastname}</div>
 			</div>
-			<div class="body-medium font-semibold">
+			<div class="text-xs font-semibold">
 				{user.role}
 			</div>
 		</div>
