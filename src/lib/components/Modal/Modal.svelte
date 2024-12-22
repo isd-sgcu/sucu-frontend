@@ -38,7 +38,7 @@
 </script>
 
 {#if isModalOpen}
-	<div class="fixed z-50 inset-0 bg-gray-700 bg-opacity-40 backdrop-blur-sm" />
+	<div class="fixed z-50 inset-0 bg-gray-700 bg-opacity-40 backdrop-blur-sm" ></div>
 	<div class="fixed inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center z-50">
 		<div
 			class="bg-white h-[500px] max-md:h-[600px] max-md:w-[400px] w-[800px] rounded p-[36px] flex flex-col"
