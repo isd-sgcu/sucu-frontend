@@ -16,8 +16,6 @@
 		"fix": "prettier --write . && eslint . --fix"
 	},
 	"devDependencies": {
-		"@skeletonlabs/skeleton": "^2.10.4",
-		"@skeletonlabs/tw-plugin": "^0.4.0",
 		"@sveltejs/adapter-auto": "^3.2.4",
 		"@sveltejs/adapter-vercel": "^5.4.4",
 		"@sveltejs/kit": "^2.8.3",
