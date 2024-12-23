@@ -49,6 +49,7 @@
 {#if isAdminPage}
     <div class="fixed min-h-screen bg-white z-50">
         <Sidebar {menuItems} {user} />
+		<slot />
     </div>
 {:else}
     <div>
