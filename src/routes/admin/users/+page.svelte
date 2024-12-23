@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SearchBar from '$lib/components/SearchBar.svelte';
     import Button from '$lib/components/Button.svelte';
+    import Pagination from '$lib/components/Pagination/Pagination.svelte';
 	import { onMount } from 'svelte';
 
 	export let title: string = 'จัดการผู้ใช้งาน';
@@ -171,6 +172,9 @@
 			</div>
 		{/each}
 	</div>
+    <div class="w-full flex justify-end mt-5">
+	<Pagination Arrayitem={filteredUsers.map(user => user.id)} />
+    </div>
 </div>
 
 <style>

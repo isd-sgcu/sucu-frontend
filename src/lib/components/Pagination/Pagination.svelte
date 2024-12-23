@@ -108,10 +108,3 @@
 	</div>
 </div>
 
-<div class="items-list mt-5">
-	{#each paginatedItems as item}
-		<div class="item">
-			{item}
-		</div>
-	{/each}
-</div>
