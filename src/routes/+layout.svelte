@@ -47,7 +47,7 @@
 </script>
 
 {#if isAdminPage}
-    <div class="fixed min-h-screen bg-white z-50">
+    <div class="fixed min-h-screen bg-white z-50 w-full">
         <Sidebar {menuItems} {user} />
 		<slot />
     </div>
