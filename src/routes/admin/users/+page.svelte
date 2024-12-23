@@ -194,7 +194,7 @@
         {/each}
 
         <!-- Pagination -->
-        <div class="mt-4">
+        <div class="mt-4  w-full  flex justify-end">
             <Pagination
                 Arrayitem={filteredUsers}
 
