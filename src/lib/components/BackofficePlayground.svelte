@@ -18,12 +18,10 @@
 	}
 
 	function handleConfirm() {
-		console.log('Confirmed');
 		confirmationModalOpen = false;
 	}
 
 	function handleCancel() {
-		console.log('Cancelled');
 		confirmationModalOpen = false;
 	}
 
