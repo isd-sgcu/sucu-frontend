@@ -8,6 +8,7 @@
 
 	let searchQuery = '';
 	let selectedFilter = '';
+    let activePopoverId: string | null = null;
 
 	const filters = [
 		{ id: 'นายกสโมสร', label: 'นายกสโมสร +' },
@@ -20,15 +21,26 @@
 	];
 
 	let users = [
-		{ id: '6753736328', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-		{ id: '6753736328', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-		{ id: '6753736328', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-		{ id: '6753736328', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-		{ id: '6753736328', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' }
+		{ id: '6753736321', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+		{ id: '6753736322', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+		{ id: '6753736323', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+		{ id: '6753736324', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+		{ id: '6753736325', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' }
 	];
 
 	let filteredUsers = [...users];
 	let selectedItems: string[] = [];
+
+    function togglePopover(id: string) {
+        activePopoverId = activePopoverId === id ? null : id;
+    }
+
+    function handleClickOutside(event: MouseEvent) {
+        const target = event.target as HTMLElement;
+        if (!target.closest('.popover') && !target.closest('.more-options-button')) {
+            activePopoverId = null;
+        }
+    }
 
 	function filterUsers() {
 		filteredUsers = users.filter(
@@ -61,7 +73,16 @@
 			selectedItems = selectedItems.filter((item) => item !== id);
 		}
 	}
+
+    onMount(() => {
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    });
 </script>
+
+<svelte:window on:click={handleClickOutside} />
 
 <div class="pl-64 min-h-screen bg-white p-8">
 	<div class="mb-4 mt-5">
@@ -69,16 +90,16 @@
 		<p class="text-sm text-gray-600">{subtitle}</p>
 	</div>
 
-	<div class="mb-4 ">
+	<div class="mb-4">
 		<SearchBar
 			bind:value={searchQuery}
 			on:input={() => console.log('Search query updated:', searchQuery)}
 		/>
 	</div>
 
-	<div class="rounded-lg ">
+	<div class="rounded-lg">
 		<!-- Header -->
-		<div class="flex items-center border-b border-sucu-pink-02  px-4 py-3 mb-2">
+		<div class="flex items-center border-b border-sucu-pink-02 px-4 py-3 mb-2">
 			<div class="flex w-12 items-center">
 				<input
 					type="checkbox"
@@ -87,9 +108,9 @@
 					class="h-4 w-4 rounded border-gray-300"
 				/>
 			</div>
-			<div class="flex-1 font-semibold text-sm  ">เลือกทั้งหมด</div>
-            <div class="w-32 "></div>
-            <div class="w-40 "></div>
+			<div class="flex-1 font-semibold text-sm">เลือกทั้งหมด</div>
+            <div class="w-32"></div>
+            <div class="w-40"></div>
             <div class="w-12"></div>
 
             <Button class="w-24 h-8 shadow-none font-normal text-sm" on:click={() => console.log('Button clicked')}>
@@ -99,7 +120,7 @@
 
 		<!-- List Items -->
 		{#each filteredUsers as user}
-			<div class="flex items-center px-4 py-3 hover:bg-gray-50 shadow-md my-2 ">
+			<div class="flex items-center px-4 py-3 hover:bg-gray-50 shadow-md my-2 relative">
 				<div class="flex w-12 items-center">
 					<input
 						type="checkbox"
@@ -116,14 +137,36 @@
 						{user.role}
 					</span>
 				</div>
-				<div class="w-12">
-					<button class="text-gray-500 hover:text-gray-700" aria-label="More options">
+				<div class="w-12 relative">
+					<button 
+                        class="text-gray-500 hover:text-gray-700 more-options-button" 
+                        aria-label="More options"
+                        on:click|stopPropagation={() => togglePopover(user.id)}
+                    >
 						<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 							<path
 								d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
 							/>
 						</svg>
 					</button>
+                    {#if activePopoverId === user.id}
+                        <div class="absolute right-0 mt-2 w-32 rounded-lg bg-white shadow-lg z-50 popover">
+                            <div class="py-1">
+                                <button
+                                    class="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-left"
+                                    on:click={() => console.log('Edit clicked')}
+                                >
+                                    แก้ไข
+                                </button>
+                                <button
+                                    class="block w-full px-4 py-2 text-sm text-red-600 hover:bg-gray-100 text-left"
+                                    on:click={() => console.log('Delete clicked')}
+                                >
+                                    ลบ
+                                </button>
+                            </div>
+                        </div>
+                    {/if}
 				</div>
 			</div>
 		{/each}
@@ -134,4 +177,7 @@
 	input[type="checkbox"] {
 		cursor: pointer;
 	}
+    .popover {
+        filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
+    }
 </style>
