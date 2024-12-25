@@ -46,6 +46,8 @@
 	}
 
 	$: {
+		console.log("all : " , Arrayitem);
+		console.log("paginate : " ,paginatedItems);
 		totalPages = Math.ceil(Arrayitem.length / parseInt(itemsPerPage));
 		paginateItems();
 	}

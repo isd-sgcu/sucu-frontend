@@ -199,7 +199,7 @@
 		<!-- Pagination -->
 		<div class="mt-4 w-full flex justify-end">
 			<Pagination
-				Arrayitem={filteredUsers}
+				Arrayitem={users.map(user => user.id)}
 				itemsPerPage={itemsPerPage.toString()}
 				on:pageChange={handlePageChange}
 			/>
