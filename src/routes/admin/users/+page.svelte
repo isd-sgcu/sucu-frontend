@@ -22,16 +22,16 @@
     ];
 
     let users = [
-        { id: '6753736321', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-        { id: '6753736322', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-        { id: '6753736323', title: 'นางสาวหนูเต็ส เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-        { id: '6753736324', title: 'นางสาวหนูเต็ส เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-        { id: '6753736325', title: 'นางสาวหนูเต็น เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-        { id: '6753736326', title: 'นางสาวหนูเต็น เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-        { id: '6753736327', title: 'นางสาวหนูเต็ก เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-        { id: '6753736328', title: 'นางสาวหนูเต็ก เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-        { id: '6753736329', title: 'นางสาวหนูเต็ด เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
-        { id: '6753736320', title: 'นางสาวหนูเต็ด เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' }
+        { id: '6753736321', title: 'นางสาวหนูเต็งก เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+        { id: '6753736322', title: 'นางสาวหนูเต็งก เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+        { id: '6753736323', title: 'นางสาวหนูเต็งข เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+        { id: '6753736324', title: 'นางสาวหนูเต็งข เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+        { id: '6753736325', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+        { id: '6753736326', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+        { id: '6753736327', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+        { id: '6753736328', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+        { id: '6753736329', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' },
+        { id: '6753736320', title: 'นางสาวหนูเต็ง เต็งเต็งเต็ง', date: '01/11/2024', role: 'Admin' }
     ];
 
     let filteredUsers: any[] = [];
@@ -97,7 +97,8 @@
     }
 
     function handlePageChange(event: CustomEvent) {
-        paginatedIds = event.detail;
+        paginatedIds = event.detail.paginatedItems;
+        itemsPerPage = parseInt(event.detail.itemsPerPage);
         updateFilteredUsers();
     }
 

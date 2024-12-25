@@ -18,7 +18,7 @@
     function changePage(page: number | string) {
         currentPage = page;
         paginateItems();
-        dispatch('pageChange', paginatedItems);
+        dispatch('pageChange', { paginatedItems, itemsPerPage });
     }
 
     function paginateItems() {
@@ -53,13 +53,13 @@
         itemsPerPage = newItemsPerPage;
         totalPages = Math.ceil(Arrayitem.length / parseInt(itemsPerPage));
         paginateItems();
-        dispatch('pageChange', paginatedItems);
+        dispatch('pageChange', { paginatedItems, itemsPerPage });
     }
 
     $: {
         totalPages = Math.ceil(Arrayitem.length / parseInt(itemsPerPage));
         paginateItems();
-        dispatch('pageChange', paginatedItems);
+        dispatch('pageChange', { paginatedItems, itemsPerPage });
     }
 
     $: if (!itemsPerPage || parseInt(itemsPerPage) < 1) {
