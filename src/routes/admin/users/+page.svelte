@@ -99,7 +99,7 @@
 
 <svelte:window on:click={handleClickOutside} />
 
-<div class="pl-64 min-h-screen bg-white p-8">
+<div class="pl-64 min-h-screen bg-white p-8 m-8">
 	<div class="mb-4 mt-5">
 		<h1 class="text-2xl font-bold text-gray-800">{title}</h1>
 		<p class="text-sm text-gray-600">{subtitle}</p>
