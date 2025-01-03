@@ -68,7 +68,7 @@
 								bind:value={content}
 								placeholder="ระบุเนื้อหา"
 								rows="4"
-							/>
+							></textarea>
 						</div>
 
 						<div class="space-y-4">
