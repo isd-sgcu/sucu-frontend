@@ -15,11 +15,23 @@
 			const token = response.result.access_token;
 			const encryptedToken = CryptoJS.AES.encrypt(token, secretKey).toString();
 			sessionStorage.setItem('encryptedToken', encryptedToken);
-			console.log('Login successful:');
 			goto('/admin');
 		} catch (error) {
 			errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
 		}
+		getDecryptedToken();
+	};
+
+	const getDecryptedToken = () => {
+		const encryptedToken = sessionStorage.getItem('encryptedToken');
+		if (encryptedToken) {
+			const bytes = CryptoJS.AES.decrypt(encryptedToken, secretKey);
+			const decryptedToken = bytes.toString(CryptoJS.enc.Utf8);
+			console.log('Decrypted Token:', decryptedToken);
+			return decryptedToken;
+		}
+		console.log('No encrypted token found in sessionStorage.');
+		return null;
 	};
 </script>
 
