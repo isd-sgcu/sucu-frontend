@@ -2,16 +2,13 @@ const API_URL = '/api/getall';
 
 export async function getAllUsers(token: string) {
 	try {
-		const response = await fetch(
-			API_URL,
-			{
-				method: 'GET',
-				headers: {
-					'Content-Type': 'application/json',
-					Authorization: `Bearer ${token}`
-				}
+		const response = await fetch(API_URL, {
+			method: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: `Bearer ${token}`
 			}
-		);
+		});
 
 		if (!response.ok) {
 			const errorData = await response.json();
