@@ -1,7 +1,9 @@
+const API_URL = '/api/getall';
+
 export async function getAllUsers(token: string) {
 	try {
 		const response = await fetch(
-			'https://sucu-backend-2024-689509857491.asia-southeast1.run.app/api/v1/users',
+			API_URL,
 			{
 				method: 'GET',
 				headers: {
