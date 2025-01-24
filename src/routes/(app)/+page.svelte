@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { typography } from '../styles/tailwind/typography';
-	import { cn } from '../lib/utils/cn';
-	import Button from '../lib/components/Button.svelte';
-	import sucuHomeBanner1 from '../lib/assets/images/sucuHomeBanner1.webp';
-	import sucuHomeBanner2 from '../lib/assets/images/sucuHomeBanner2.png';
-	import sucuHomeBanner3 from '../lib/assets/images/sucuHomeBanner3.png';
+	import { typography } from '../../styles/tailwind/typography';
+	import { cn } from '../../lib/utils/cn';
+	import Button from '../../lib/components/Button.svelte';
+	import sucuHomeBanner1 from '../../lib/assets/images/sucuHomeBanner1.webp';
+	import sucuHomeBanner2 from '../../lib/assets/images/sucuHomeBanner2.png';
+	import sucuHomeBanner3 from '../../lib/assets/images/sucuHomeBanner3.png';
 	import AnnouncementCard from '$lib/components/AnnouncementCard/AnnouncementCard.svelte';
 	import OrganizationCard from '$lib/components/OrganizationCard/OrganizationCard.svelte';
 	import { mockAnnouncementCard } from '$lib/mock/annoucementCardData';
