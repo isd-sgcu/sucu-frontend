@@ -26,10 +26,16 @@
 
 <style>
 	.search-bar {
-		@apply w-full flex items-center gap-3 px-4 py-3 rounded-sm border border-sucu-gray-light;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.75rem 1rem;
+		border-radius: 0.125rem;
+		border: 1px solid var(--sucu-gray-light);
 	}
 
 	.search-bar:focus-within {
-		@apply border-sucu-pink-03;
+		border-color: var(--sucu-pink-03);
 	}
 </style>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
 	import { cn } from '../../utils/cn';
 	import Fa from 'svelte-fa';
 	import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -12,9 +13,12 @@
 	let totalPages: number = Math.ceil(Arrayitem.length / parseInt(itemsPerPage));
 	let paginatedItems: string[] = [];
 
+	const dispatch = createEventDispatcher();
+
 	function changePage(page: number | string) {
 		currentPage = page;
 		paginateItems();
+		dispatch('pageChange', { paginatedItems, itemsPerPage });
 	}
 
 	function paginateItems() {
@@ -45,9 +49,17 @@
 		return pages;
 	}
 
+	function changeItemsPerPage(newItemsPerPage: string) {
+		itemsPerPage = newItemsPerPage;
+		totalPages = Math.ceil(Arrayitem.length / parseInt(itemsPerPage));
+		paginateItems();
+		dispatch('pageChange', { paginatedItems, itemsPerPage });
+	}
+
 	$: {
 		totalPages = Math.ceil(Arrayitem.length / parseInt(itemsPerPage));
 		paginateItems();
+		dispatch('pageChange', { paginatedItems, itemsPerPage });
 	}
 
 	$: if (!itemsPerPage || parseInt(itemsPerPage) < 1) {
@@ -100,18 +112,10 @@
 					items={pageChoice}
 					bind:currentChoice={itemsPerPage}
 					outerClass="w-20 bg-opacity-50 "
-					on:change={(e) => (itemsPerPage = e.detail)}
+					on:change={(e) => changeItemsPerPage(e.detail)}
 				/>
 			</div>
 			<div class="flex items-center">/ page</div>
 		</div>
 	</div>
-</div>
-
-<div class="items-list mt-5">
-	{#each paginatedItems as item}
-		<div class="item">
-			{item}
-		</div>
-	{/each}
 </div>

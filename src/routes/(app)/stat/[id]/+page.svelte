@@ -3,7 +3,7 @@
 	import { cn } from '$lib/utils';
 	import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
-	import { typography } from '../../../styles/tailwind/typography';
+	import { typography } from '../../../../styles/tailwind/typography';
 	import dayjs from 'dayjs';
 	import buddhistEra from 'dayjs/plugin/buddhistEra';
 	import 'dayjs/locale/th';

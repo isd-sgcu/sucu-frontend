@@ -7,12 +7,11 @@
 	let title = '';
 	let content = '';
 	let coverFile: FileList;
-	let imageFiles: FileList;
-	let documentFiles: FileList;
+	// let imageFiles: FileList;
+	// let documentFiles: FileList;
 
 	function handleSubmit() {
 		// TODO: Implement create statistic
-		console.log(imageFiles, coverFile, documentFiles);
 		open = false;
 	}
 
@@ -68,7 +67,7 @@
 								bind:value={content}
 								placeholder="ระบุเนื้อหา"
 								rows="4"
-							/>
+							></textarea>
 						</div>
 
 						<div class="space-y-4">

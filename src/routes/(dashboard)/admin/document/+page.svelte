@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
 	import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons';
-	import { typography } from '../../styles/tailwind/typography';
+	import { typography } from '../../../../styles/tailwind/typography';
 	import Fa from 'svelte-fa';
 	import TabsRoot from '$lib/components/Tabs/TabsRoot.svelte';
 	import TabsList from '$lib/components/Tabs/TabsList.svelte';
