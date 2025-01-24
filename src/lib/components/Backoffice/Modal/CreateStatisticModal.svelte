@@ -7,8 +7,8 @@
 	let title = '';
 	let content = '';
 	let coverFile: FileList;
-	let imageFiles: FileList;
-	let documentFiles: FileList;
+	// let imageFiles: FileList;
+	// let documentFiles: FileList;
 
 	function handleSubmit() {
 		// TODO: Implement create statistic
