@@ -6,7 +6,7 @@
 
 	let menuItems = [
 		{ title: 'ประกาศ', href: '/admin' },
-		{ title: 'เอกสาร', href: '/admin/documents' },
+		{ title: 'เอกสาร', href: '/admin/document' },
 		{ title: 'สถิติ และ งบประมาณ', href: '/admin/stats' },
 		{ title: 'จัดการผู้ใช้งาน', href: '/admin/users' }
 	];

@@ -12,7 +12,6 @@
 
 	function handleSubmit() {
 		// TODO: Implement create statistic
-		console.log(imageFiles, coverFile, documentFiles);
 		open = false;
 	}
 
